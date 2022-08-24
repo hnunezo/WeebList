@@ -1,0 +1,100 @@
+.home-title {
+  display: flex;
+  align-items: center;
+  color: #e95fa0;
+}
+.home-title-img {
+  width: 10rem;
+}
+
+.main-img {
+  width: 30vh;
+}
+
+.container-home {
+  /* From https://css.glass */
+  background: #ffc8dd;
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5.1px);
+  -webkit-backdrop-filter: blur(5.1px);
+  border: 4px solid #ffafcc;
+  padding: 0 25px 25px 25px;
+  color: #e95fa0;
+}
+
+@media (max-width: 991px) {
+  .container-page-home {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .container-home {
+    margin-bottom: 6vh;
+    width: 85%;
+  }
+  .home-title {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+.space-bet {
+  justify-content: space-evenly;
+}
+
+.input {
+  background-color: #fff4fb;
+  color: #ffafcc;
+  margin-bottom: 1rem;
+}
+
+.input::placeholder {
+  color: #e95fa0;
+}
+
+.message {
+  color: #e95fa0;
+}
+
+.container-title {
+  box-sizing: border-box;
+  height: 100vh;
+}
+
+.negative-margin {
+  margin-top: -40px;
+  width: 90%;
+  text-align: center;
+}
+
+.text-border {
+  text-shadow: 2px 0 #fff, -2px 0 #fff, 0 2px #fff, 0 -2px #fff, 1px 1px #fff,
+    -1px -1px #fff, 1px -1px #fff, -1px 1px #fff;
+}
+
+.links:link {
+  color: #e95fa0;
+  background-color: transparent;
+  text-decoration: none;
+}
+
+.links:visited {
+  color: #8e3563;
+  background-color: transparent;
+  text-decoration: none;
+}
+
+.links:hover {
+  color: #79305a;
+  background-color: transparent;
+  text-decoration: underline;
+  transition: ease;
+  transition-duration: 0.3s;
+}
+
+.links:active {
+  color: red;
+  background-color: transparent;
+  text-decoration: underline;
+}

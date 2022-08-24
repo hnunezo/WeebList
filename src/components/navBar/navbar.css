@@ -1,0 +1,35 @@
+.navbar {
+  background-color: #e95fa0;
+  transition: ease;
+  height: 100%;
+}
+
+.nav-item:hover {
+  background-color: #ffafcc;
+  transition-duration: 0.3s;
+}
+
+.nav {
+  align-items: center;
+}
+
+.git-img {
+  width: 2rem;
+  border-radius: 50%;
+  background-color: #e95fa0;
+  border: #e95fa0;
+}
+
+@media (max-width: 990px) {
+  .git-img {
+    margin: 15px;
+  }
+}
+
+.git-img:hover {
+  transition: ease;
+  transition-duration: 0.3s;
+  transform: scale(1.7);
+  border: 5px solid #ffafcc;
+  background-color: #ffafcc;
+}

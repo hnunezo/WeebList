@@ -1,0 +1,13 @@
+.table-container {
+  border: solid 5px pink;
+  border-radius: 25px;
+  padding: 15px;
+}
+
+.table-item {
+  border-bottom: solid 5px #e95fa0;
+}
+
+.text-color {
+  color: #e95fa0;
+}

@@ -1,0 +1,30 @@
+.loading {
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.loading .box-line {
+  padding: 2px;
+  width: 40%;
+  height: 20px;
+  border: 2px solid #e95fa0;
+}
+
+.loading .box-line .line {
+  height: 20px;
+  border-radius: 20px;
+  background-color: white;
+  animation: loading 2s forwards cubic-bezier(0, 0, 0, 0);
+}
+
+@keyframes loading {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 100%;
+  }
+}
