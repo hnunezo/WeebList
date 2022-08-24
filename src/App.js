@@ -143,7 +143,8 @@ const App = () => {
           : window.location.hash === "#/anime" ||
             window.location.hash === "#/manga" ||
             window.location.hash === "#/character" ||
-            window.location.hash === "#/person"
+            window.location.hash === "#/person" ||
+            window.location.hash === "#/favorites"
           ? viewContainer
           : search === "" || isLoading === true
           ? styleContainer
