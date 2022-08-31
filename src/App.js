@@ -93,7 +93,6 @@ const App = () => {
     } else {
       const copy = fav.filter((el) => el.el_type === anime.el_type);
       const addRank = { rank: copy.length + 1, ...anime };
-      console.log(addRank);
       setFav(fav.concat(addRank));
       Swal.fire({
         title: "Success",

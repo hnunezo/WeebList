@@ -9,8 +9,6 @@ const FavView = ({ fav, setFav }) => {
   const [selected, setSelected] = useState("");
 
   const deleteFav = (elemento) => {
-    console.log(fav);
-    console.log(elemento);
     Swal.fire({
       title: `Do you want to delete ${
         elemento.el_type === "anime" || elemento.el_type === "manga"
@@ -35,10 +33,14 @@ const FavView = ({ fav, setFav }) => {
         const switchingRank = copy.filter(
           (el) => el.el_type === elemento.el_type
         );
+        const favWithoutType = copy.filter((el) =>
+          el.el_type !== elemento.el_type ? el : null
+        );
         switchingRank.forEach((el, i) => {
           el.rank = Number(i) + 1;
         });
-        setFav(switchingRank);
+        switchingRank.forEach((el) => favWithoutType.push(el));
+        setFav(favWithoutType);
         Swal.fire({
           title: "Deleted",
           imageUrl: "./assets/alert_icons/success.png",

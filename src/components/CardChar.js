@@ -2,7 +2,6 @@ import Card from "react-bootstrap/Card";
 
 const CardChar = ({ el, addFav, type }) => {
   //ADDING TYPE (ANIME,MANGA,CHARAC, PERSON)
-  console.log(el);
   const copy = { el_type: type, ...el };
   return (
     <div className="div-relative">
