@@ -20,7 +20,7 @@ const MyRoutes = ({
   return (
     <>
       <Routes>
-        <Route path="/home" element={<Home />} />
+        <Route path="/home" index element={<Home />} />
         <Route
           path="/anime"
           element={

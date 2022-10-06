@@ -134,9 +134,7 @@ const App = () => {
       }
     >
       <MyNavBar changeUrl={changeUrl} />
-      {window.location.hash === "#/" || window.location.hash === "" ? (
-        <OwnCarousel />
-      ) : null}
+      {window.location.hash === "#/home" ? <OwnCarousel /> : null}
       <Container className="m-auto main-container pb-4 px-0 mt-4 mb-4 border rounded vh-md-100">
         <MyRoutes
           search={search}
