@@ -1,5 +1,5 @@
 import Home from "../components/home/Home";
-import { Route, Routes } from "react-router-dom";
+import { Navigate, Route, Routes } from "react-router-dom";
 import View from "../components/View";
 import FavView from "../components/fav/FavView";
 
@@ -20,7 +20,8 @@ const MyRoutes = ({
   return (
     <>
       <Routes>
-        <Route path="/home" index element={<Home />} />
+        <Route path="/" element={<Navigate to="/home" />} />
+        <Route path="/home" element={<Home />} />
         <Route
           path="/anime"
           element={
