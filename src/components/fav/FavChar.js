@@ -7,7 +7,7 @@ const FavChar = ({ fav, deleteFav, index }) => {
   const styles = {
     width: "2rem",
   };
-
+  console.log(fav, "favoritos");
   return (
     <Draggable draggableId={fav.mal_id.toString()} index={index}>
       {(provided) => (
@@ -18,12 +18,12 @@ const FavChar = ({ fav, deleteFav, index }) => {
           ref={provided.innerRef}
         >
           <th scope="row" className="text-center">
-            {fav.rank}
+            {fav.myrank}
           </th>
           <td>
             <div className="d-flex align-items-center mt-2">
               <img
-                src={fav.image_url}
+                src={fav.images.jpg.image_url}
                 alt={`${fav.img_url}.jpg`}
                 style={styles}
               />

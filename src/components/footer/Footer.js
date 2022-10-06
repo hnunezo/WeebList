@@ -1,7 +1,6 @@
 import "./footer.css";
 import { FaAngleUp } from "react-icons/fa";
 import { FaLinkedin } from "react-icons/fa";
-import { FaInstagram } from "react-icons/fa";
 import { FaGit } from "react-icons/fa";
 import { FaEnvelope } from "react-icons/fa";
 import "../home/homestyle.css";
@@ -31,13 +30,6 @@ const Footer = () => {
             rel="noreferrer"
           >
             <FaLinkedin size={50} className="icon-link" />
-          </a>
-          <a
-            href="https://www.instagram.com/pechohot/"
-            target={"_blank"}
-            rel="noreferrer"
-          >
-            <FaInstagram size={50} className="icon-link" />
           </a>
           <a
             href="mailto: hector.nunez.oviedo@gmail.com"

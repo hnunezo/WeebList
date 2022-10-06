@@ -7,8 +7,8 @@ const Select = ({ changeSelected }) => {
         <option value={""}>-----Select list----</option>
         <option value={"anime"}>Animes List</option>
         <option value={"manga"}>Mangas List</option>
-        <option value={"character"}>Characters List</option>
-        <option value={"person"}>Persons List</option>
+        <option value={"characters"}>Characters List</option>
+        <option value={"people"}>People List</option>
       </Form.Select>
     </div>
   );

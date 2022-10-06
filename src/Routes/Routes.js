@@ -20,7 +20,7 @@ const MyRoutes = ({
   return (
     <>
       <Routes>
-        <Route path="/" element={<Home />} />
+        <Route path="/home" element={<Home />} />
         <Route
           path="/anime"
           element={
@@ -56,7 +56,7 @@ const MyRoutes = ({
           }
         />
         <Route
-          path="/character"
+          path="/characters"
           element={
             <View
               search={search}
@@ -73,7 +73,7 @@ const MyRoutes = ({
           }
         />
         <Route
-          path="/person"
+          path="/people"
           element={
             <View
               search={search}

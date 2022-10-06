@@ -10,14 +10,20 @@ const CardChar = ({ el, addFav, type }) => {
           <div className="flip-card-front">
             <Card.Img
               alt={`${el.name}.png`}
-              src={el.image_url}
+              src={el.images.jpg.image_url}
               className="img-card"
             />
             <div className="text-card">
               <Card.Title tag="h5">{el.name}</Card.Title>
-              {el.alternative_names.length > 0 ? (
-                <Card.Subtitle>Alt. Name: {el.alternative_names}</Card.Subtitle>
-              ) : null}
+              {type === "people" ? (
+                el.alternate_names.length > 0 ? (
+                  <Card.Subtitle>
+                    Alt. Name: {el.alternate_names[0]}
+                  </Card.Subtitle>
+                ) : null
+              ) : (
+                <Card.Subtitle>{el.name_kanji}</Card.Subtitle>
+              )}
               <div className="d-flex gap-3 justify-content-center ">
                 <button
                   className="button button-add"

@@ -17,12 +17,15 @@ const FavAni = ({ fav, deleteFav, index }) => {
           className="table-item"
         >
           <th scope="row" className="text-center">
+            {fav.myrank}
+          </th>
+          <th scope="row" className="text-center">
             {fav.rank}
           </th>
           <td>
             <div className="d-flex align-items-center mt-2">
               <img
-                src={fav.image_url}
+                src={fav.images.jpg.image_url}
                 alt={`${fav.img_url}.jpg`}
                 style={styles}
               />

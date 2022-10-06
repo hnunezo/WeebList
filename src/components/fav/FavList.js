@@ -11,7 +11,7 @@ const FavList = ({ fav, orderedFav, deleteFav, setFav }) => {
     const [reorderItems] = copy.splice(result.source.index, 1);
     copy.splice(result.destination.index, 0, reorderItems);
     const orderedCopy = copy.map((el, index) => {
-      return { ...el, rank: index + 1 };
+      return { ...el, myrank: index + 1 };
     });
 
     fav.forEach((elemento) => {
@@ -41,13 +41,14 @@ const FavList = ({ fav, orderedFav, deleteFav, setFav }) => {
                 <thead>
                   <tr>
                     <th className="col text-center ">Your Rank</th>
+                    <th className="col text-center ">Community Rank</th>
                     <th className="col text-center">Title / Name</th>
                     <th className="col text-center"></th>
                   </tr>
                 </thead>
                 <tbody>
                   {orderedFav
-                    .sort((a, b) => a.rank - b.rank)
+                    .sort((a, b) => a.myrank - b.myrank)
                     .map((favorite, index) => {
                       if (
                         favorite.el_type === "anime" ||

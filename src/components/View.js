@@ -25,9 +25,9 @@ const View = ({
         ? "1.png"
         : type === "manga"
         ? "2.jpg"
-        : type === "character"
+        : type === "characters"
         ? "3.jpg"
-        : type === "person"
+        : type === "people"
         ? "4.jpg"
         : null
     })`,
@@ -52,10 +52,10 @@ const View = ({
             ? "Anime"
             : type === "manga"
             ? "Manga"
-            : type === "character"
-            ? "Character"
-            : type === "person"
-            ? "Person"
+            : type === "characters"
+            ? "Characters"
+            : type === "people"
+            ? "People"
             : null}
         </h2>
       </div>

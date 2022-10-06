@@ -5,6 +5,7 @@ import { useState } from "react";
 const CardAni = ({ el, addFav, type }) => {
   const [flipped, setFlipped] = useState(false);
   //ADDING TYPE (ANIME,MANGA,CHARAC, PERSON)
+  console.log(el);
   const copy = { el_type: type, ...el };
   return (
     <div className="div-relative">
@@ -16,11 +17,12 @@ const CardAni = ({ el, addFav, type }) => {
           <div className="flip-card-front">
             <Card.Img
               alt={`${el.title}.png`}
-              src={el.image_url}
+              src={el.images.jpg.image_url}
               className="img-card"
             />
             <div className="text-card">
               <Card.Title tag="h5">{el.title}</Card.Title>
+              <p style={{ fontSize: "0.7rem" }}>{el.title_japanese}</p>
               <div className="d-flex gap-3 justify-content-center ">
                 <button
                   variant="info me-1"
@@ -39,11 +41,27 @@ const CardAni = ({ el, addFav, type }) => {
             </div>
           </div>
           <div className="flip-card-back">
-            <h2>Sipnosis</h2>
-            <Card.Text>{el.synopsis}</Card.Text>
+            {el.synopsis ? (
+              el.synopsis.length > 900 ? (
+                <div>
+                  <h2>Sipnosis</h2>
+                  <Card.Text>{el.synopsis.substring(0, 600)}...</Card.Text>
+                </div>
+              ) : (
+                <div>
+                  <h2>Sipnosis</h2>
+                  <Card.Text>{el.synopsis}</Card.Text>
+                </div>
+              )
+            ) : (
+              <h2>No synopsis allowed</h2>
+            )}
             <button
               onClick={() => setFlipped(false)}
               className="button button-add"
+              style={{
+                marginTop: "0.5rem",
+              }}
             >
               {" "}
               Back

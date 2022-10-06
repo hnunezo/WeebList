@@ -23,40 +23,23 @@ const App = () => {
     setSearched([]);
     // CONDICIONAL SI ESTA VACIO SEARCH
     if (search !== "") {
-      let options = {
-        method: "GET",
-        url: "https://jikan1.p.rapidapi.com/search/anime",
-        params: {},
-        headers: {
-          "X-RapidAPI-Key":
-            "82fe1a9e1emshc495434b8d0a709p10a4bajsn0ae0077252b3",
-          "X-RapidAPI-Host": "jikan1.p.rapidapi.com",
-        },
-        timeout: 2000,
-      };
+      let url = "";
+      url = `https://api.jikan.moe/v4/${type}?q=${search}&limit=12`;
 
       //CONDICIONAL SEGUN LA URL
-      if (type === "anime") {
-        options.url = "https://jikan1.p.rapidapi.com/search/anime";
-        options.params = { q: search, order_by: "bypopularity", limit: 12 };
-      } else if (type === "manga") {
-        options.url = "https://jikan1.p.rapidapi.com/search/manga";
-        options.params = { q: search, order_by: "bypopularity", limit: 12 };
-      } else if (type === "character") {
-        options.url = "https://jikan1.p.rapidapi.com/search/character";
-        options.params = { q: search, order_by: "bypopularity", limit: 12 };
-      } else if (type === "person") {
-        options.url = "https://jikan1.p.rapidapi.com/search/person";
-        options.params = { q: search, limit: 12 };
+      if (type === "people" || type === "character") {
+        url = `https://api.jikan.moe/v4/${type}?q=${search}&limit=12`;
+        console.log(url);
       }
 
       //SETTIME PARA EL LOADER
       const delayDebounceFn = setTimeout(() => {
         // Send Axios request here
         axios
-          .request(options)
+          .request(url)
           .then(function (response) {
-            setSearched(response.data.results);
+            setSearched(response.data.data);
+            console.log(response, "response");
             setIsLoading(false);
           })
           .catch(function () {
@@ -92,7 +75,7 @@ const App = () => {
       });
     } else {
       const copy = fav.filter((el) => el.el_type === anime.el_type);
-      const addRank = { rank: copy.length + 1, ...anime };
+      const addRank = { myrank: copy.length + 1, ...anime };
       setFav(fav.concat(addRank));
       Swal.fire({
         title: "Success",

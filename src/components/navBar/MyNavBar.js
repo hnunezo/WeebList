@@ -11,7 +11,11 @@ const MyNavBar = ({ changeUrl }) => {
         <Container>
           <div>
             <Navbar.Brand>
-              <a href="/" className="text-decoration-none text-light">
+              <a
+                onClick={() => changeUrl("/home")}
+                className="text-decoration-none text-light"
+                href="#/home"
+              >
                 WeebList
               </a>
             </Navbar.Brand>
@@ -32,13 +36,13 @@ const MyNavBar = ({ changeUrl }) => {
                 Manga
               </Nav.Link>
               <Nav.Link
-                onClick={() => changeUrl("/character")}
+                onClick={() => changeUrl("/characters")}
                 className="text-white nav-item p-3"
               >
                 Character
               </Nav.Link>
               <Nav.Link
-                onClick={() => changeUrl("/person")}
+                onClick={() => changeUrl("/people")}
                 className="text-white nav-item p-3"
               >
                 Person
@@ -51,7 +55,7 @@ const MyNavBar = ({ changeUrl }) => {
               </Nav.Link>
             </Nav>
             <a
-              href="https://github.com/hnunezo"
+              href="https://github.com/hnunezo/WeebList"
               target={"_blank"}
               rel="noreferrer"
               className="nodecoration"

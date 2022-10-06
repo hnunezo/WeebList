@@ -4,7 +4,7 @@ import { FaGithub } from "react-icons/fa";
 const Home = () => {
   return (
     <div className="container-page-home">
-      <div className="container-home mt-4">
+      <div className="container-home m-4">
         <div className="home-title justify-content-center">
           <h2 className="display-1">Welcome Weeb </h2>
           <img
@@ -15,7 +15,10 @@ const Home = () => {
         </div>
       </div>
 
-      <div className="row my-4 text-center text-md-start space-bet">
+      <div
+        className="row my-4 text-center text-md-start "
+        style={{ justifyContent: "space-between" }}
+      >
         <div className="col-sm-12 col-lg-5 container-home">
           <h2 className="display-3">Porpuse</h2>
           <p className="lead">
@@ -55,7 +58,12 @@ const Home = () => {
         </div>
         <div className="col-xs-12 col-lg-3 text-center container-home">
           <h2 className="display-5">GitHub</h2>
-          <a href="/" target={"_blank"} className="lead links">
+          <a
+            href="https://github.com/hnunezo/WeebList"
+            rel="noreferrer"
+            target={"_blank"}
+            className="lead links"
+          >
             <FaGithub size={50} />
           </a>
         </div>
