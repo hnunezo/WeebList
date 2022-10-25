@@ -6,7 +6,7 @@ const Home = () => {
     <div className="container-page-home">
       <div className="container-home m-4">
         <div className="home-title justify-content-center">
-          <h2 className="display-1">Welcome Weeb </h2>
+          <h2 className="display-1">Welcome!!</h2>
           <img
             src="./assets/home_title.png"
             alt="Welcome"

@@ -32,7 +32,7 @@ const Footer = () => {
             <FaLinkedin size={50} className="icon-link" />
           </a>
           <a
-            href="mailto: hector.nunez.oviedo@gmail.com"
+            href="mailto: hector.nunez.contact@gmail.com"
             target={"_blank"}
             rel="noreferrer"
           >

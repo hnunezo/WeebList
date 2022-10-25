@@ -34,7 +34,10 @@ const FavAni = ({ fav, deleteFav, index }) => {
           </td>
 
           <td className="text-center">
-            <Button className="btn-danger" onClick={() => deleteFav(fav)}>
+            <Button
+              style={{ backgroundColor: "#e95fa0", border: "none" }}
+              onClick={() => deleteFav(fav)}
+            >
               <FaTrash />
             </Button>
           </td>
